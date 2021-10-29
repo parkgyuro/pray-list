@@ -1,0 +1,161 @@
+* {
+    --card-width: 80vw;
+    --card-height: calc(var(--card-width) / 0.5);
+}
+p,
+h1 {
+    margin: 0;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #eff0f5;
+    overflow: hidden;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.search-box {
+    position: absolute;
+    width: fit-content;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    border-radius: 10px;
+    background-color: #eff0f4;
+    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
+    transition: 0.5s;
+}
+.search-box.active {
+    transform: translateX(-50%) translateY(0%);
+}
+.search-box form {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+form .text {
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px 0;
+    border-radius: 10px;
+    background-color: #ecedf5;
+    box-shadow: inset 3px 3px 3px #d8d9db, inset -3px -3px 3px #ffffff;
+    outline: none;
+}
+form .submit {
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 200;
+    box-shadow: 2px 2px 2px #d8d9db, -2px -2px 2px #ffffff;
+    outline: none;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.nav {
+    width: 90%;
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: absolute;
+    top: 3%;
+}
+.search,
+.home {
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+    padding: 10px;
+    background: #eff0f4;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
+}
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: var(--card-width);
+    height: var(--card-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+    background: #eff0f4;
+    box-shadow: 5px 5px 5px #d8d9db, -5px -5px 5px #ffffff;
+    gap: 20px;
+    opacity: 0;
+    transition: 1s;
+}
+.card.active {
+    opacity: 1;
+}
+.img-container {
+    width: calc(var(--card-height) / 4);
+    height: calc(var(--card-height) / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #f4f8fa;
+    box-shadow: 2px 2px 5px #d8d9db, -3px -3px 3px #ffffff;
+}
+.img {
+    width: 90%;
+    height: 90%;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.text {
+    text-align: center;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.name {
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+.sub-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prayer-topic {
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ecedf5;
+    box-shadow: inset 2px 2px 5px #d8d9db, inset -3px -3px 3px #ffffff;
+}
