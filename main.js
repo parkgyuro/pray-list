@@ -1,6 +1,6 @@
 import data from './data.js';
 
-const dataLength = 2;
+const dataLength = data.length;
 
 const wrapper = document.querySelector('.wrapper');
 let cards = [];
@@ -105,10 +105,25 @@ const form = document.querySelector('.form');
 for (let i = 0; i < searchBtn.length; i++) {
     searchBtn[i].addEventListener('click', () => {
         searchBox.classList.toggle('active');
-        cardItem[i].classList.toggle('search');
     });
+}
+function setUserName(userName) {
+    let newArray = [...data];
+    newArray.map((item, i) => {
+        if (item.name === userName) {
+            index = i;
+        }
+        if (cardItem[i].classList.contains('active')) {
+            cardItem[i].classList.remove('active');
+        }
+    });
+    cardItem[index].classList.add('active');
 }
 
 form.addEventListener('submit', (e) => {
-    console.log(e);
+    e.preventDefault();
+    let userName = e.target[0].value;
+    setUserName(userName);
+    e.target[0].value = '';
+    searchBox.classList.remove('active');
 });
