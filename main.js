@@ -100,6 +100,7 @@ cardItem[index].classList.add('active');
 
 const searchBtn = document.querySelectorAll('.search');
 const searchBox = document.querySelector('.search-box');
+const form = document.querySelector('.form');
 
 for (let i = 0; i < searchBtn.length; i++) {
     searchBtn[i].addEventListener('click', () => {
@@ -107,3 +108,7 @@ for (let i = 0; i < searchBtn.length; i++) {
         cardItem[i].classList.toggle('search');
     });
 }
+
+form.addEventListener('submit', (e) => {
+    console.log(e);
+});
