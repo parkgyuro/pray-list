@@ -67,12 +67,12 @@ window.addEventListener('touchstart', (e) => {
 window.addEventListener('touchend', (e) => {
     cx = e.changedTouches[0].clientX;
 
-    if (cx - x < 50 && cx - x !== 0) {
+    if (cx - x < 100 && cx - x !== 0) {
         index++;
         if (index > dataLength - 1) {
             index = dataLength - 1;
         }
-    } else if (cx - x > -50 && cx - x !== 0) {
+    } else if (cx - x > -100 && cx - x !== 0) {
         index--;
         if (index < 0) {
             index = 0;
@@ -101,6 +101,7 @@ cardItem[index].classList.add('active');
 const searchBtn = document.querySelectorAll('.search');
 const searchBox = document.querySelector('.search-box');
 const form = document.querySelector('.form');
+const backBtn = document.querySelector('.back-btn');
 
 for (let i = 0; i < searchBtn.length; i++) {
     searchBtn[i].addEventListener('click', () => {
@@ -110,11 +111,12 @@ for (let i = 0; i < searchBtn.length; i++) {
 function setUserName(userName) {
     let newArray = [...data];
     newArray.map((item, i) => {
+        if (cardItem[i].classList.contains('active')) {
+            console.log(cardItem[i]);
+            cardItem[i].classList.remove('active');
+        }
         if (item.name === userName) {
             index = i;
-        }
-        if (cardItem[i].classList.contains('active')) {
-            cardItem[i].classList.remove('active');
         }
     });
     cardItem[index].classList.add('active');
@@ -127,3 +129,9 @@ form.addEventListener('submit', (e) => {
     e.target[0].value = '';
     searchBox.classList.remove('active');
 });
+backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchBox.classList.remove('active');
+});
+
+// intersectionobserve
