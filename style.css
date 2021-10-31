@@ -113,9 +113,8 @@ form .text {
     font-size: 1.2rem;
     padding: 10px 0;
     border-radius: 10px;
-    background-color: #ecedf5;
-    box-shadow: inset 3px 3px 3px #d8d9db, inset -3px -3px 3px #ffffff;
-    outline: none;
+    background-color: #eff0f4;
+    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
 }
 form .submit {
     background: none;
@@ -235,6 +234,6 @@ form .submit {
     line-height: 1.5;
     padding: 10px;
     border-radius: 10px;
-    background: #ecedf5;
+    background: #eff0f4;
     box-shadow: inset 2px 2px 5px #d8d9db, inset -3px -3px 3px #ffffff;
 }
