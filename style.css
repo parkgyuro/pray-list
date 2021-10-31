@@ -25,6 +25,50 @@ body {
     margin: 0;
     position: relative;
 }
+.home-wrapper {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eff0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    opacity: 1;
+}
+.home-wrapper.active {
+    opacity: 0;
+    pointer-events: none;
+}
+.home-container {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.area {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.area p {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: #eff0f4;
+    box-shadow: 5px 5px 5px #d8d9db, -5px -5px 5px #ffffff;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+}
 body.active .loading {
     display: none;
 }

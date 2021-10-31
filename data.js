@@ -5,7 +5,7 @@ export default [
         admission: 3,
         graduated: 4,
         prayerTopic: '중국복음화',
-        liveIn: '중국',
+        liveIn: '237(중국)',
         imgSrc: '',
     },
     {
@@ -14,7 +14,7 @@ export default [
         admission: 4,
         graduated: 4,
         prayerTopic: '',
-        liveIn: '호주',
+        liveIn: '237(호주)',
         imgSrc: '',
     },
     {
@@ -23,7 +23,7 @@ export default [
         admission: 5,
         graduated: 6,
         prayerTopic: '',
-        liveIn: '',
+        liveIn: '237',
         imgSrc: 'none',
     },
     {
@@ -32,7 +32,7 @@ export default [
         admission: 3,
         graduated: 6,
         prayerTopic: '',
-        liveIn: '프랑스',
+        liveIn: '237(프랑스)',
         imgSrc: 'none',
     },
     {
@@ -41,7 +41,7 @@ export default [
         admission: 5,
         graduated: 7,
         prayerTopic: '',
-        liveIn: '프랑스',
+        liveIn: '237(프랑스)',
         imgSrc: '',
     },
     {
@@ -50,7 +50,7 @@ export default [
         admission: 10,
         graduated: 9,
         prayerTopic: '',
-        liveIn: '미국',
+        liveIn: '237(미국)',
         imgSrc: '',
     },
     {
@@ -59,7 +59,7 @@ export default [
         admission: 12,
         graduated: '',
         prayerTopic: '',
-        liveIn: '말레이시아',
+        liveIn: '237(말레이시아)',
         imgSrc: 'none',
     },
     {
@@ -69,7 +69,7 @@ export default [
         graduated: 15,
         prayerTopic:
             '잠언22:29, 행9:15, 렘1:5 / 어디에 있든지 무엇을 하든지 하나님께 예배하는 예배자, 나를 통해 복음이 전달되는 전도자, 기도에 의해 살아가는 기도의 사람',
-        liveIn: '라트비아',
+        liveIn: '237(라트비아)',
         imgSrc: '',
     },
     {
@@ -78,7 +78,7 @@ export default [
         admission: 4,
         graduated: '',
         prayerTopic: '',
-        liveIn: '시카고',
+        liveIn: '237(시카고)',
         imgSrc: '',
     },
     {
@@ -88,7 +88,7 @@ export default [
         graduated: 16,
         prayerTopic:
             '1,3,8,14 집중 속에서 24응답 누릴 수 있도록, 뉴질랜드 8개 대학을 살리는 복음 전도자가 되게',
-        liveIn: '오클랜드',
+        liveIn: '237(오클랜드)',
         imgSrc: '',
     },
     {
@@ -98,7 +98,7 @@ export default [
         graduated: 6,
         prayerTopic:
             '현장목회, 20전도전략증인 엘리사 7000 도단성 운동, 일본 렘넌트운동, 일본 RLS, 일본 선교시대, 일본 목회자들의 동역자',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: 'none',
     },
     {
@@ -107,7 +107,7 @@ export default [
         admission: 9,
         graduated: 9,
         prayerTopic: '내가 가는 현장에 예비 된 하나님의 응답 발견할 수 있도록',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: '',
     },
     {
@@ -116,7 +116,7 @@ export default [
         admission: 10,
         graduated: '',
         prayerTopic: '일본 RLS',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: '',
     },
     {
@@ -126,7 +126,7 @@ export default [
         graduated: 6,
         prayerTopic:
             '일본 지역에 RLS,RUTC 센터 치유사역원이 세워 지도록, 과거의 잃어버린 기억을 복음 안에서 발견하도록, 마음껏 복음을 들을 수있는 환경으로 인도받도록',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: '',
     },
     {
@@ -136,7 +136,7 @@ export default [
         graduated: '',
         prayerTopic:
             '말씀이 드려지는 예배 회복, 세상의 육에서 하나님의 나라로 들어올 수 있는 하나님의 인도, 네피림 시대, 흑암 시대의 빛을 비추는 이 시대의 선교사, 전도자',
-        liveIn: '홍콩',
+        liveIn: '237(홍콩)',
         imgSrc: '',
     },
     {
@@ -145,7 +145,7 @@ export default [
         admission: 8,
         graduated: '',
         prayerTopic: '임마누엘 누리게 하소서',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: 'none',
     },
     {
@@ -154,7 +154,7 @@ export default [
         admission: 5,
         graduated: 5,
         prayerTopic: '완전 복음 체질되게',
-        liveIn: '미국',
+        liveIn: '237(미국)',
         imgSrc: '',
     },
     {
@@ -163,7 +163,7 @@ export default [
         admission: 4,
         graduated: '',
         prayerTopic: '',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: '',
     },
     {
@@ -172,7 +172,7 @@ export default [
         admission: 1,
         graduated: 3,
         prayerTopic: '',
-        liveIn: '일본',
+        liveIn: '237(일본)',
         imgSrc: '',
     },
     {

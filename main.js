@@ -7,7 +7,74 @@ let cards = [];
 let index = 0;
 let x = 0;
 let cx = 0;
+let userData = [...data];
 
+// home
+const homeBtn = document.querySelector('.home');
+const homePage = document.querySelector('.home-wrapper');
+const pageBtn = document.querySelector('.home-container');
+homeBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    homePage.classList.remove('active');
+});
+pageBtn.addEventListener('click', (e) => {
+    let target = e.target;
+    let seoul = [];
+    let chungcheong = [];
+    let gwangju = [];
+    let deagu = [];
+    let busan = [];
+    let global = [];
+    data.map((item) => {
+        if (
+            item.liveIn.includes('서울') ||
+            item.liveIn.includes('경기') ||
+            item.liveIn.includes('인천')
+        ) {
+            seoul.push(item);
+        } else if (item.liveIn.includes('충청')) {
+            chungcheong.push(item);
+        } else if (item.liveIn.includes('호남')) {
+            gwangju.push(item);
+        } else if (item.liveIn.includes('대경')) {
+            deagu.push(item);
+        } else if (item.liveIn.includes('부경')) {
+            busan.push(item);
+        } else if (item.liveIn.includes('237')) {
+            global.push(item);
+        }
+    });
+    if (target.classList.contains('page-btn')) {
+        userData = [];
+        homePage.classList.add('active');
+        switch (target.dataset.area) {
+            case '전체':
+                userData = [...data];
+                break;
+            case '서경인':
+                userData = [...seoul];
+                break;
+            case '충청':
+                userData = [...chungcheong];
+                break;
+            case '대경':
+                userData = [...deagu];
+                break;
+            case '호남':
+                userData = [...gwangju];
+                break;
+            case '부경':
+                userData = [...busan];
+                break;
+            case '237':
+                userData = [...global];
+                break;
+        }
+    }
+    setCard();
+});
+
+// cardsection
 const img = document.querySelector('.img');
 const name = document.querySelector('.name');
 const number = document.querySelector('.number');
@@ -71,34 +138,34 @@ const prayerTopic = document.querySelector('.prayer-topic');
 // }
 function setInit() {
     for (let i = 0; i < dataLength; i++) {
-        if (data[i].imgSrc !== 'none') {
-            data[i].imgSrc = data[i].name;
+        if (userData[i].imgSrc !== 'none') {
+            userData[i].imgSrc = data[i].name;
         }
-        if (data[i].admission === '') {
-            data[i].admission = '-';
+        if (userData[i].admission === '') {
+            userData[i].admission = '-';
         }
-        if (data[i].graduated === '') {
-            data[i].graduated = '-';
+        if (userData[i].graduated === '') {
+            userData[i].graduated = '-';
         }
-        if (data[i].liveIn === '') {
-            data[i].liveIn = '-';
+        if (userData[i].liveIn === '') {
+            userData[i].liveIn = '-';
         }
-        if (data[i].prayerTopic === '') {
-            data[i].prayerTopic = '-';
+        if (userData[i].prayerTopic === '') {
+            userData[i].prayerTopic = '-';
         }
     }
 }
 function setCard() {
-    img.style.backgroundImage = `url(./image-data/${data[index].imgSrc}.png)`;
-    name.innerHTML = data[index].name;
-    number.innerHTML = `${data[index].admission}기 / ${data[index].graduated}회`;
-    liveIn.innerHTML = data[index].liveIn;
-    prayerTopic.innerHTML = data[index].prayerTopic;
+    console.log(userData);
+    img.style.backgroundImage = `url(./image-data/${userData[index].imgSrc}.png)`;
+    name.innerHTML = userData[index].name;
+    number.innerHTML = `${userData[index].admission}기 / ${userData[index].graduated}회`;
+    liveIn.innerHTML = userData[index].liveIn;
+    prayerTopic.innerHTML = userData[index].prayerTopic;
 }
 window.addEventListener('load', () => {
     document.body.classList.add('active');
     setInit();
-    setCard();
 });
 window.addEventListener('touchstart', (e) => {
     x = e.touches[0].clientX;
@@ -153,7 +220,7 @@ searchBtn.addEventListener('click', () => {
     searchBox.classList.toggle('active');
 });
 function setUserName(userName) {
-    let newArray = [...data];
+    let newArray = [...userData];
     let itemName = [];
     newArray.map((item, i) => {
         // if (cardItem.classList.contains('active')) {
@@ -185,5 +252,3 @@ backBtn.addEventListener('click', (e) => {
     e.preventDefault();
     searchBox.classList.remove('active');
 });
-
-// home
