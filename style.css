@@ -6,13 +6,17 @@ p,
 h1 {
     margin: 0;
 }
-input {
-    border: none;
-    border-right: 0px;
-    border-top: 0px;
-    border-left: 0px;
-    border-bottom: 0px;
+input,
+textarea,
+button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
 }
+
 html {
     width: 100%;
     height: 100%;
@@ -158,7 +162,7 @@ form .text {
     padding: 10px 0;
     border-radius: 10px;
     background-color: #eff0f4;
-    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
+    box-shadow: inset 3px 3px 3px #d8d9db, inset -3px -3px 3px #ffffff;
 }
 form .submit {
     background: none;

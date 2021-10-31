@@ -1,13 +1,13 @@
 import data from './data.js';
 
-const dataLength = data.length;
-
 const wrapper = document.querySelector('.wrapper');
 let cards = [];
 let index = 0;
 let x = 0;
 let cx = 0;
 let userData = [...data];
+
+let dataLength = userData.length;
 
 // home
 const homeBtn = document.querySelector('.home');
@@ -16,8 +16,11 @@ const pageBtn = document.querySelector('.home-container');
 homeBtn.addEventListener('click', (e) => {
     e.preventDefault();
     homePage.classList.remove('active');
+    userData = [...data];
 });
 pageBtn.addEventListener('click', (e) => {
+    userData = [];
+
     let target = e.target;
     let seoul = [];
     let chungcheong = [];
@@ -45,7 +48,6 @@ pageBtn.addEventListener('click', (e) => {
         }
     });
     if (target.classList.contains('page-btn')) {
-        userData = [];
         homePage.classList.add('active');
         switch (target.dataset.area) {
             case '전체':
@@ -71,6 +73,7 @@ pageBtn.addEventListener('click', (e) => {
                 break;
         }
     }
+    dataLength = userData.length;
     setCard();
 });
 
@@ -156,7 +159,6 @@ function setInit() {
     }
 }
 function setCard() {
-    console.log(userData);
     img.style.backgroundImage = `url(./image-data/${userData[index].imgSrc}.png)`;
     name.innerHTML = userData[index].name;
     number.innerHTML = `${userData[index].admission}기 / ${userData[index].graduated}회`;
