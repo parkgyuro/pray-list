@@ -24,7 +24,7 @@ export default [
         graduated: 6,
         prayerTopic: '',
         liveIn: '',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ export default [
         graduated: 6,
         prayerTopic: '',
         liveIn: '프랑스',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 5,
@@ -60,7 +60,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '말레이시아',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 8,
@@ -99,7 +99,7 @@ export default [
         prayerTopic:
             '현장목회, 20전도전략증인 엘리사 7000 도단성 운동, 일본 렘넌트운동, 일본 RLS, 일본 선교시대, 일본 목회자들의 동역자',
         liveIn: '일본',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 12,
@@ -146,7 +146,7 @@ export default [
         graduated: '',
         prayerTopic: '임마누엘 누리게 하소서',
         liveIn: '일본',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 17,
@@ -236,7 +236,7 @@ export default [
         graduated: 5,
         prayerTopic: '',
         liveIn: '서울',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 27,
@@ -708,7 +708,7 @@ export default [
         graduated: 10,
         prayerTopic: '',
         liveIn: '경기(수원)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 77,
@@ -754,7 +754,7 @@ export default [
         graduated: 10,
         prayerTopic: '',
         liveIn: '경기(수원)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 82,
@@ -897,7 +897,7 @@ export default [
         prayerTopic:
             '언약의 개인화, 말씀의 교회화, 성령충만의 현장화가 되어 전도자의 삶으로 증인되도록',
         liveIn: '인천',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 97,
@@ -1524,7 +1524,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '대경(대구)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 165,
@@ -1542,7 +1542,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '대경(대구)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 167,
@@ -1639,7 +1639,7 @@ export default [
         graduated: 9,
         prayerTopic: '',
         liveIn: '대경(경주)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 177,
@@ -1806,7 +1806,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '부경',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 195,
@@ -1815,7 +1815,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '부경',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 196,
@@ -1833,7 +1833,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '부경(부산)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 198,
@@ -1924,7 +1924,7 @@ export default [
         graduated: '',
         prayerTopic: '',
         liveIn: '부경',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 208,
