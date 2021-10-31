@@ -20,7 +20,7 @@ homeBtn.addEventListener('click', (e) => {
 });
 pageBtn.addEventListener('click', (e) => {
     userData = [];
-
+    index = 0;
     let target = e.target;
     let seoul = [];
     let chungcheong = [];
@@ -72,9 +72,9 @@ pageBtn.addEventListener('click', (e) => {
                 userData = [...global];
                 break;
         }
+        dataLength = userData.length;
+        setCard();
     }
-    dataLength = userData.length;
-    setCard();
 });
 
 // cardsection
@@ -200,7 +200,9 @@ window.addEventListener('touchend', (e) => {
     // }
 
     // cardItem[index].classList.add('active');
-    setCard();
+    if (homePage.classList.contains('active')) {
+        setCard();
+    }
 });
 const cardItem = document.querySelector('.card');
 cardItem.classList.add('active');
