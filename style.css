@@ -1,10 +1,20 @@
 * {
     --card-width: 80vw;
     --card-height: calc(var(--card-width) / 0.5);
+    --card-max-width: 400px;
+    --card-max-height: calc((var(--card-max-width) / 0.5));
+}
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff')
+        format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 p,
 h1 {
     margin: 0;
+    font-family: 'Cafe24SsurroundAir';
 }
 input,
 textarea,
@@ -15,6 +25,7 @@ button {
     border-radius: 0;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
+    font-family: 'Cafe24SsurroundAir';
 }
 
 html {
@@ -64,12 +75,12 @@ body {
 .area p {
     width: 100px;
     height: 100px;
-    border-radius: 20px;
+    border-radius: 50%;
     background: #eff0f4;
     box-shadow: 5px 5px 5px #d8d9db, -5px -5px 5px #ffffff;
     display: flex;
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 1rem;
+    font-weight: 600;
     justify-content: center;
     align-items: center;
 }
@@ -178,6 +189,7 @@ form .submit {
     font-weight: 500;
     box-shadow: 2px 2px 2px #d8d9db, -2px -2px 2px #ffffff;
     outline: none;
+    font-family: 'Cafe24SsurroundAir';
 }
 .description {
     content: '';
@@ -205,6 +217,8 @@ form .submit {
     color: rgb(26, 26, 26);
     width: 10vw;
     height: 10vw;
+    max-width: 50px;
+    max-height: 50px;
     background: #eff0f4;
     border-radius: 50%;
     box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
@@ -221,6 +235,8 @@ form .submit {
     padding: 10px;
     width: var(--card-width);
     height: var(--card-height);
+    max-width: var(--card-max-width);
+    max-height: var(--card-max-height);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,6 +254,8 @@ form .submit {
 .img-container {
     width: calc(var(--card-height) / 4);
     height: calc(var(--card-height) / 4);
+    max-width: calc(var(--card-max-height) / 4);
+    max-height: calc(var(--card-max-height) / 4);
     display: flex;
     justify-content: center;
     align-items: center;
