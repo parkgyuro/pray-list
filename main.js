@@ -47,7 +47,10 @@ pageBtn.addEventListener('click', (e) => {
             global.push(item);
         }
     });
-    if (target.classList.contains('page-btn')) {
+    while (!target.classList.contains('area')) {
+        target = target.parentNode;
+    }
+    if (target.classList.contains('area')) {
         homePage.classList.add('active');
         switch (target.dataset.area) {
             case '전체':

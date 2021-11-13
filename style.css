@@ -1,9 +1,10 @@
 * {
     --card-width: 80vw;
     --card-height: calc(var(--card-width) / 0.5);
-    --card-max-width: 400px;
+    --card-max-width: 350px;
     --card-max-height: calc((var(--card-max-width) / 0.5));
 }
+
 @font-face {
     font-family: 'Cafe24SsurroundAir';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff')
@@ -15,6 +16,11 @@ p,
 h1 {
     margin: 0;
     font-family: 'Cafe24SsurroundAir';
+    color: rgb(115, 130, 149);
+}
+button {
+    border: none;
+    background-color: transparent;
 }
 input,
 textarea,
@@ -35,7 +41,12 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: #eff0f5;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        160deg,
+        rgba(239, 246, 255, 1) 0%,
+        rgb(237, 244, 255) 50%
+    );
     overflow: hidden;
     margin: 0;
     position: relative;
@@ -47,7 +58,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #eff0f5;
+    /* background-color: rgb(219, 230, 246); */
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        160deg,
+        rgba(239, 246, 255, 1) 0%,
+        rgb(237, 244, 255) 50%
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,29 +77,52 @@ body {
 }
 .home-container {
     width: 80%;
+    max-width: 400px;
     height: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-}
-.area {
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
-.area p {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #eff0f4;
-    box-shadow: 5px 5px 5px #d8d9db, -5px -5px 5px #ffffff;
+.area {
+    width: 80%;
+    height: 10%;
+    border-radius: 20px;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(246, 250, 255) 0%,
+        rgb(237, 245, 255) 50%
+    );
+    box-shadow: 5px 5px 10px rgb(205, 217, 236),
+        -5px -5px 10px rgba(255, 255, 255);
     display: flex;
     font-size: 1rem;
     font-weight: 600;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+}
+.area p {
+    color: rgb(115, 130, 149);
+}
+.area button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(242, 248, 255) 0%,
+        rgb(241, 248, 255) 50%
+    );
+    box-shadow: 5px 5px 10px rgb(205, 217, 236),
+        -5px -5px 10px rgba(255, 255, 255);
+    display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(115, 130, 149);
+    font-size: 0.5rem;
 }
 body.active .loading {
     display: none;
@@ -128,8 +168,12 @@ body.active .loading {
     left: 0;
     right: 0;
     border-radius: 10px;
-    background-color: #eff0f4;
-    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        160deg,
+        rgba(239, 246, 255, 1) 0%,
+        rgb(237, 244, 255) 50%
+    );
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -150,12 +194,18 @@ body.active .loading {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #eff0f4;
-    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(242, 248, 255) 0%,
+        rgb(241, 248, 255) 50%
+    );
+    box-shadow: 5px 5px 10px rgb(205, 217, 236),
+        -5px -5px 10px rgba(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(94, 94, 94);
+    color: rgb(115, 130, 149);
 }
 .search-box form {
     display: flex;
@@ -172,8 +222,17 @@ form .text {
     font-size: 1.2rem;
     padding: 10px 0;
     border-radius: 10px;
-    background-color: #eff0f4;
-    box-shadow: inset 3px 3px 3px #d8d9db, inset -3px -3px 3px #ffffff;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(242, 248, 255) 0%,
+        rgb(241, 248, 255) 50%
+    );
+    box-shadow: inset 3px 3px 3px rgb(205, 217, 236),
+        inset -3px -3px 3px rgba(255, 255, 255);
+}
+form {
+    color: rgb(115, 130, 149);
 }
 form .submit {
     background: none;
@@ -187,7 +246,14 @@ form .submit {
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
-    box-shadow: 2px 2px 2px #d8d9db, -2px -2px 2px #ffffff;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(242, 248, 255) 0%,
+        rgb(241, 248, 255) 50%
+    );
+    box-shadow: 3px 3px 5px rgb(205, 217, 236),
+        -3px -3px 5px rgba(255, 255, 255);
     outline: none;
     font-family: 'Cafe24SsurroundAir';
 }
@@ -219,13 +285,19 @@ form .submit {
     height: 10vw;
     max-width: 50px;
     max-height: 50px;
-    background: #eff0f4;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(242, 248, 255) 0%,
+        rgb(241, 248, 255) 50%
+    );
+    box-shadow: 5px 5px 10px rgb(205, 217, 236),
+        -5px -5px 10px rgba(255, 255, 255);
     border-radius: 50%;
-    box-shadow: 3px 3px 3px #d8d9db, -3px -3px 3px #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(94, 94, 94);
+    color: rgb(115, 130, 149);
 }
 .card {
     position: absolute;
@@ -242,8 +314,14 @@ form .submit {
     align-items: center;
     border-radius: 10px;
     flex-direction: column;
-    background: #eff0f4;
-    box-shadow: 5px 5px 5px #d8d9db, -5px -5px 5px #ffffff;
+    background: rgb(222, 237, 255);
+    background: linear-gradient(
+        150deg,
+        rgb(246, 250, 255) 0%,
+        rgb(237, 245, 255) 50%
+    );
+    box-shadow: 5px 5px 20px rgb(205, 217, 236),
+        -5px -5px 20px rgba(255, 255, 255);
     gap: 20px;
     opacity: 0;
     transition: 1s;
@@ -260,8 +338,11 @@ form .submit {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: #f4f8fa;
-    box-shadow: 2px 2px 5px #d8d9db, -3px -3px 3px #ffffff;
+    background: rgb(233, 243, 255);
+    border-left: white 1px solid;
+    border-top: white 1px solid;
+    box-shadow: 5px 5px 15px rgb(195, 209, 233),
+        -2px -2px 4px rgba(255, 255, 255);
 }
 .img {
     width: 90%;
@@ -300,6 +381,156 @@ form .submit {
     line-height: 1.5;
     padding: 10px;
     border-radius: 10px;
-    background: #eff0f4;
-    box-shadow: inset 2px 2px 5px #d8d9db, inset -3px -3px 3px #ffffff;
+    background: rgb(239, 246, 255);
+    background: linear-gradient(
+        160deg,
+        rgba(239, 246, 255, 1) 0%,
+        rgb(237, 244, 255) 50%
+    );
+    box-shadow: inset 3px 3px 5px rgb(205, 217, 236),
+        inset -3px -3px 5px rgba(255, 255, 255);
+}
+@media screen and (max-width: 400px) {
+    .area {
+        font-size: 0.7rem;
+    }
+    .prayer-topic,
+    .name {
+        font-size: 0.9rem;
+    }
+    .sub-text,
+    .home,
+    .search,
+    form .submit,
+    form .text,
+    .back-btn {
+        font-size: 0.8rem;
+    }
+    .back-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .home,
+    .search {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .area {
+        font-size: 0.8rem;
+    }
+    .prayer-topic,
+    .name {
+        font-size: 1rem;
+    }
+    .sub-text,
+    .home,
+    .search,
+    form .submit,
+    form .text,
+    .back-btn {
+        font-size: 0.9rem;
+    }
+    .back-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .home,
+    .search {
+        width: 35px;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .area {
+        font-size: 0.9rem;
+    }
+    .prayer-topic,
+    .name {
+        font-size: 1.1rem;
+    }
+    .sub-text,
+    .home,
+    .search,
+    form .submit,
+    form .text,
+    .back-btn {
+        font-size: 1rem;
+    }
+    .back-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .home,
+    .search {
+        width: 40px;
+        height: 40px;
+    }
+}
+.area {
+    font-size: 0.9rem;
+}
+.prayer-topic,
+.name {
+    font-size: 1.1rem;
+}
+.sub-text,
+.home,
+.search,
+form .submit,
+form .text,
+.back-btn {
+    font-size: 1rem;
+}
+.back-btn {
+    width: 40px;
+    height: 40px;
+}
+.home,
+.search {
+    width: 40px;
+    height: 40px;
+}
+@media (orientation: landscape) {
+    * {
+        --card-height: 80vh;
+        --card-width: calc(var(--card-height) / 2);
+        --card-max-width: 350px;
+        --card-max-height: calc((var(--card-max-width) / 0.5));
+    }
+    .area {
+        font-size: 1vh;
+    }
+    .prayer-topic,
+    .name {
+        font-size: 1vh;
+    }
+    .sub-text,
+    .home,
+    .search,
+    form .submit,
+    form .text,
+    .back-btn {
+        font-size: 0.9vh;
+    }
+    .back-btn {
+        width: 5vh;
+        min-width: 30px;
+        min-height: 30px;
+        height: 5vh;
+    }
+    .home,
+    .search {
+        width: 7vh;
+        height: 7vh;
+        min-width: 30px;
+        min-height: 30px;
+    }
+    .area button {
+        width: 4vh;
+        height: 4vh;
+        min-width: 30px;
+        min-height: 30px;
+    }
 }
