@@ -641,3 +641,8 @@ form .text,
         min-height: 30px;
     }
 }
+@media (display-mode: standalone) {
+    html {
+        height: 100vh;
+    }
+}
