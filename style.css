@@ -45,6 +45,8 @@ html {
         rgba(239, 246, 255, 1) 0%,
         rgb(237, 244, 255) 50%
     );
+    min-height: calc(100% + 5%);
+    padding: 5% 0;
 }
 body {
     width: 100%;
