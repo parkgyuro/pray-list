@@ -164,7 +164,7 @@ function setInit() {
 function setCard() {
     img.style.backgroundImage = `url(./image-data/${userData[index].imgSrc}.png)`;
     name.innerHTML = userData[index].name;
-    number.innerHTML = `${userData[index].admission}기 / ${userData[index].graduated}회`;
+    number.innerHTML = `${userData[index].admission}기 입학/ ${userData[index].graduated}회 졸업`;
     liveIn.innerHTML = userData[index].liveIn;
     prayerTopic.innerHTML = userData[index].prayerTopic;
 }
@@ -258,4 +258,5 @@ form.addEventListener('submit', (e) => {
 backBtn.addEventListener('click', (e) => {
     e.preventDefault();
     searchBox.classList.remove('active');
+    description.innerHTML = '';
 });

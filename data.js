@@ -117,7 +117,7 @@ export default [
         graduated: '',
         prayerTopic: '일본 RLS',
         liveIn: '237(일본)',
-        imgSrc: '',
+        imgSrc: 'none',
     },
     {
         id: 14,

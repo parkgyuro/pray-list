@@ -37,6 +37,8 @@ button {
 html {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: fixed;
     background: rgb(239, 246, 255);
     background: linear-gradient(
         160deg,
@@ -55,7 +57,7 @@ body {
     );
     overflow: hidden;
     margin: 0;
-    position: relative;
+    position: fixed;
 }
 .home-wrapper {
     z-index: 100;
@@ -372,7 +374,7 @@ form .submit {
     width: fit-content;
     padding: 5px 10px;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: bold;
 }
 .sub-text {
     display: flex;
@@ -461,7 +463,8 @@ form .submit {
     .search,
     form .submit,
     form .text,
-    .back-btn {
+    .back-btn,
+    .description {
         font-size: 1rem;
     }
     .back-btn {
@@ -486,7 +489,8 @@ form .submit {
 .search,
 form .submit,
 form .text,
-.back-btn {
+.back-btn,
+.description {
     font-size: 1rem;
 }
 .back-btn {
@@ -517,7 +521,8 @@ form .text,
     .search,
     form .submit,
     form .text,
-    .back-btn {
+    .back-btn,
+    .description {
         font-size: 0.9vh;
     }
     .back-btn {
