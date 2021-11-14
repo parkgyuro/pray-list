@@ -36,8 +36,6 @@ button {
 
 html {
     width: 100%;
-    height: 110%;
-    overflow: hidden;
     position: fixed;
     background: rgb(239, 246, 255);
     background: linear-gradient(
