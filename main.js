@@ -260,3 +260,13 @@ backBtn.addEventListener('click', (e) => {
     searchBox.classList.remove('active');
     description.innerHTML = '';
 });
+
+// intro
+
+const intro = document.querySelector('.intro');
+
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        intro.classList.add('active');
+    }, 2000);
+});
