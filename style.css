@@ -163,6 +163,11 @@ body {
         rgba(239, 246, 255, 1) 0%,
         rgb(237, 244, 255) 50%
     ); */
+    min-height: 100vh;
+    padding-top: calc(constant(safe-area-inset-top) + 5px);
+    padding-top: calc(env(safe-area-inset-top) + 5px);
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
     background-color: yellow;
     display: flex;
     justify-content: center;
