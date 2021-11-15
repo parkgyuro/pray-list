@@ -268,5 +268,5 @@ const intro = document.querySelector('.intro');
 window.addEventListener('load', () => {
     setTimeout(() => {
         intro.classList.add('active');
-    }, 2000);
+    }, 3000);
 });

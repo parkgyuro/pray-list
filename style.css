@@ -91,6 +91,8 @@ body {
     opacity: 0;
     animation: intro-p 0.3s 0.5s forwards ease-in;
     transform: translateY(50%);
+    text-align: center;
+    line-height: 2;
 }
 .intro-img {
     width: 30vw;
@@ -156,7 +158,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: rgb(239, 246, 255);
     /* background: linear-gradient(
         160deg,
